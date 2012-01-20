@@ -441,6 +441,30 @@ a.menu:after,
 }
 
 
+// FLANK
+// -----
+.flank {
+  position: relative;
+
+  .flank-menu {
+    text-align: center;
+    background-color: @baseColor;
+    position: absolute;
+    top: 0;
+    right: -21px;
+    list-style: none;
+    width: 21px;
+    height: 100%;
+    .border-right-radius(8px);
+    li {
+      color: @white;
+      padding: 2px;
+      cursor: pointer;
+    }
+  }
+}
+
+
 // BREADCRUMBS
 // -----------
 
