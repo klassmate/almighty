@@ -511,6 +511,12 @@ ul.timeline {
       }
     }
   }
+  .span07 {
+    .columns(0.7);
+  }
+  .span08 {
+    .columns(0.8);
+  }
   .datetime {
     color: @grayLight;
     text-align: right;
@@ -521,25 +527,6 @@ ul.timeline {
     list-style:none;
     margin-left: (@gridColumnWidth * 0.5) + (@gridGutterWidth * (0.5 - 1));
     margin-top: 1px;
-
-    /* reduce sizes for comments */
-    @ratio: 0.95;
-    .span1     { .columns(1*@ratio); }
-    .span2     { .columns(2*@ratio); }
-    .span3     { .columns(3*@ratio); }
-    .span4     { .columns(4*@ratio); }
-    .span5     { .columns(5*@ratio); }
-    .span6     { .columns(6*@ratio); }
-    .span7     { .columns(7*@ratio); }
-    .span8     { .columns(8*@ratio); }
-    .span9     { .columns(9*@ratio); }
-    .span10    { .columns(10*@ratio); }
-    .span11    { .columns(11*@ratio); }
-    .span12    { .columns(12*@ratio); }
-    .span13    { .columns(13*@ratio); }
-    .span14    { .columns(14*@ratio); }
-    .span15    { .columns(15*@ratio); }
-    .span16    { .columns(16*@ratio); }
   }
 }
 
