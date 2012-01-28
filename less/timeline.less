@@ -1,0 +1,47 @@
+// TIMELINE
+// --------
+
+ul.timeline {
+  list-style: none;
+  margin-left: 0;
+  p {
+    margin:0;
+    padding:0;
+  }
+  li {
+    margin-bottom: 1px;
+    dl {
+      margin-bottom: 0;
+      &[class*="span"] {
+        margin-left: 10px;
+      }
+      dt {
+        font-weight: bold;
+        display: inline;
+        color: @themeColor;
+        margin-right: 4px;
+      }
+      dd {
+        margin: 0;
+        display: inline;
+      }
+    }
+  }
+  .span07 {
+    .columns(0.7);
+  }
+  .span08 {
+    .columns(0.8);
+  }
+  .datetime {
+    color: @grayLight;
+    text-align: right;
+    font-style: italic;
+  }
+  /* for comments */
+  ul {
+    list-style:none;
+    margin-left: (@gridColumnWidth * 0.5) + (@gridGutterWidth * (0.5 - 1));
+    margin-top: 1px;
+  }
+}
