@@ -81,7 +81,7 @@
           </label>
         </div>
       </div> <!-- /row -->
-      <div class="row">
+      <div class="row" style="margin-bottom: 9px;">
         <div class="span3">
           <label>
             <h3><a href="./javascript.html#collapse">{{_i}}Collapse{{/i}}</a></h3>
@@ -108,6 +108,7 @@
           </label>
         </div>
       </div> <!-- /row -->
+      <div class="alert alert-info"><strong>{{_i}}Heads up!{{/i}}</strong> {{_i}}All javascript plugins require the latest version of jQuery.{{/i}}</div>
     </section>
 
 
@@ -127,7 +128,7 @@
         <div class="span9 columns">
           <h2>{{_i}}Static example{{/i}}</h2>
           <p>{{_i}}Below is a statically rendered modal.{{/i}}</p>
-          <div class="well" style="background-color: #888; border: none;">
+          <div class="well modal-example" style="background-color: #888; border: none;">
             <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1">
               <div class="modal-header">
                 <a href="#" class="close" data-dismiss="modal">&times;</a>
@@ -156,7 +157,7 @@
               <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
 
               <h4>{{_i}}Popover in a modal{{/i}}</h4>
-              <p>{{_i}}This <a href="#" class="btn" rel="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on hover.{{/i}}</p>
+              <p>{{_i}}This <a href="#" class="btn popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on hover.{{/i}}</p>
 
               <h4>{{_i}}Tooltips in a modal{{/i}}</h4>
               <p>{{_i}}<a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.{{/i}}</p>
@@ -220,7 +221,9 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
-          <p>{{_i}}<span class="label notice">Notice</span> If you want your modal to animate in and out, just add a <code>.fade</code> class to the <code>.modal</code> element (refer to the demo to see this in action).{{/i}}</p>
+          <div class="alert alert-info">
+            <strong>{{_i}}Heads up!{{/i}}</strong> {{_i}}If you want your modal to animate in and out, just add a <code>.fade</code> class to the <code>.modal</code> element (refer to the demo to see this in action) and include bootstrap-transition.js.{{/i}}
+          </div>
           <h3{{_i}}>Methods{{/i}}</h3>
           <h4>.modal({{_i}}options{{/i}})</h4>
           <p>{{_i}}Activates your content as a modal. Accepts an optional options <code>object</code>.{{/i}}</p>
@@ -374,7 +377,9 @@ $('#myModal').on('hidden', function () {
           <pre class="prettyprint linenums">$('.dropdown-toggle').dropdown()</pre>
           <h3>{{_i}}Markup{{/i}}</h3>
           <p>{{_i}}To quickly add dropdown functionality to any element just add <code>data-toggle="dropdown"</code> and any valid bootstrap dropdown will automatically be activated.{{/i}}</p>
-          <p>{{_i}}<span class="label notice">Notice</span> For added control and flexibility, optionally specify a <code>data-target="#fat"</code> or <code>href="#fat"</code> - this allows you to target specific dropdowns.{{/i}}</p>
+          <div class="alert alert-info">
+            <strong>{{_i}}Heads up!{{/i}}</strong>{{_i}} You may optionally target a specific dropdown by using <code>data-target="#fat"</code> or <code>href="#fat"</code>.{{/i}}
+          </div>
 
 <pre class="prettyprint linenums">
 &lt;ul class="nav pills"&gt;
@@ -468,7 +473,10 @@ $('#myModal').on('hidden', function () {
           <h3>{{_i}}Markup{{/i}}</h3>
           <p>{{_i}}To easily add scrollspy behavior to your topbar navigation, just add <code>data-spy="scroll"</code> to the element you want to spy on (most typically this would be the body).{{/i}}</p>
           <pre class="prettyprint linenums">&lt;body data-spy="scroll" &gt;...&lt;/body&gt;</pre>
-           <p>{{_i}}<span class="label notice">Notice</span> Navbar anchor tags must have resolvable id targets. For example, a <code>&lt;a href="#home"&gt;home&lt;/a&gt;</code> must correspond to something in the dom like <code>&lt;div id="home"&gt;&lt;/div&gt;</code>.{{/i}}</p>
+          <div class="alert alert-info">
+            <strong>{{_i}}Heads up!{{/i}}</strong>
+            {{_i}}Navbar links must have resolvable id targets. For example, a <code>&lt;a href="#home"&gt;home&lt;/a&gt;</code> must correspond to something in the dom like <code>&lt;div id="home"&gt;&lt;/div&gt;</code>.{{/i}}
+          </div>
           <h3>{{_i}}Options{{/i}}</h3>
           <table class="table table-bordered table-striped">
             <thead>
@@ -675,9 +683,18 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                 <p>{{_i}}Object structure is: <code>delay: { show: 500, hide: 100 }</code>{{/i}}</p>
                </td>
              </tr>
+             <tr>
+               <td>{{_i}}z-index{{/i}}</td>
+               <td>{{_i}}number{{/i}}</td>
+               <td>1020</td>
+               <td>The tooltips z-index value</td>
+             </tr>
             </tbody>
           </table>
-          <p>{{_i}}<span class="label notice">Notice</span> Individual tooltip instance options can alternatively be specified through the use of data attributes.{{/i}}</p>
+          <div class="alert alert-info">
+            <strong>{{_i}}Heads up!{{/i}}</strong>
+            {{_i}}Options for individual tooltips can alternatively be specified through the use of data attributes.{{/i}}
+          </div>
           <h3>{{_i}}Markup{{/i}}</h3>
           <p>{{_i}}For performance reasons, the Tooltip and Popover data-apis are opt in. If you would like to use them just specify a selector option.{{/i}}</p>
           <h3>{{_i}}Methods{{/i}}</h3>
@@ -689,6 +706,9 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <h4>.tooltip('hide')</h4>
           <p>{{_i}}Hides an elements tooltip.{{/i}}</p>
           <pre class="prettyprint linenums">$('#element').tooltip('hide')</pre>
+          <h4>.tooltip('toggle')</h4>
+          <p>{{_i}}Toggles an elements tooltip.{{/i}}</p>
+          <pre class="prettyprint linenums">$('#element').tooltip('toggle')</pre>
         </div>
       </div>
     </section>
@@ -775,9 +795,18 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                 <p>{{_i}}Object structure is: <code>delay: { show: 500, hide: 100 }</code>{{/i}}</p>
                </td>
              </tr>
+             <tr>
+               <td>{{_i}}z-index{{/i}}</td>
+               <td>{{_i}}number{{/i}}</td>
+               <td>1010</td>
+               <td>The popovers z-index value</td>
+             </tr>
             </tbody>
           </table>
-          <p>{{_i}}<span class="label notice">Notice</span> Individual popover instance options can alternatively be specified through the use of data attributes.{{/i}}</p>
+          <div class="alert alert-info">
+            <strong>{{_i}}Heads up!{{/i}}</strong>
+            {{_i}}Options for individual popovers can alternatively be specified through the use of data attributes.{{/i}}
+          </div>
           <h3>{{_i}}Markup{{/i}}</h3>
           <p>
           {{_i}}For performance reasons, the Tooltip and Popover data-apis are opt in. If you would like to use them just specify a the selector option.{{/i}}
@@ -791,6 +820,9 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <h4>.popover('hide')</h4>
           <p>{{_i}}Hides an elements popover.{{/i}}</p>
           <pre class="prettyprint linenums">$('#element').popover('hide')</pre>
+          <h4>.popover('toggle')</h4>
+          <p>{{_i}}Toggles an elements popover.{{/i}}</p>
+          <pre class="prettyprint linenums">$('#element').popover('toggle')</pre>
         </div>
       </div>
     </section>
@@ -947,19 +979,23 @@ $('#my-alert').bind('closed', function () {
           <h3>{{_i}}Methods{{/i}}</h3>
           <h4>$().button('toggle')</h4>
           <p>{{_i}}Toggles push state. Gives btn the look that it's been activated.{{/i}}</p>
-          <p>{{_i}}<span class="label notice">Notice</span> You can enable auto toggling of a button by using the <code>data-toggle</code> attribute.{{/i}}</p>
+          <div class="alert alert-info">
+            <strong>{{_i}}Heads up!{{/i}}</strong>
+            {{_i}}You can enable auto toggling of a button by using the <code>data-toggle</code> attribute.{{/i}}
+          </div>
           <pre class="prettyprint linenums">&lt;button class="btn" data-toggle="button" &gt;…&lt;/button&gt;</pre>
           <h4>$().button('loading')</h4>
           <p>{{_i}}Sets button state to loading - disables button and swaps text to loading text. Loading text should be defined on the button element using the data attribute <code>data-loading-text</code>.{{/i}}
           </p>
-           <pre class="prettyprint linenums">&lt;button class="btn" data-loading-text="loading stuff..." &gt;...&lt;/button&gt;</pre>
-          <p>
-            {{_i}}<span class="label notice">Notice</span> Firefox persists the disabled state across page loads. A workaround for this is to use: <code>autocomplete="off"</code>. More info can be found <a href="https://github.com/twitter/bootstrap/issues/793">here</a>.{{/i}}
-          </p>
-           <h4>$().button('reset')</h4>
-           <p>{{_i}}Resets button state - swaps text to original text.{{/i}}</p>
-           <h4>$().button(string)</h4>
-           <p>{{_i}}Resets button state - swaps text to any data defined text state.{{/i}}</p>
+          <pre class="prettyprint linenums">&lt;button class="btn" data-loading-text="loading stuff..." &gt;...&lt;/button&gt;</pre>
+          <div class="alert alert-info">
+            <strong>{{_i}}Heads up!{{/i}}</strong>
+            {{_i}}<a href="https://github.com/twitter/bootstrap/issues/793">Firefox persists the disabled state across page loads</a>. A workaround for this is to use <code>autocomplete="off"</code>.{{/i}}
+          </div>
+          <h4>$().button('reset')</h4>
+          <p>{{_i}}Resets button state - swaps text to original text.{{/i}}</p>
+          <h4>$().button(string)</h4>
+          <p>{{_i}}Resets button state - swaps text to any data defined text state.{{/i}}</p>
 <pre class="prettyprint linenums">&lt;button class="btn" data-complete-text="finished!" &gt;...&lt;/button&gt;
 &lt;script&gt;
   $('.btn').button('complete')
@@ -1063,7 +1099,10 @@ $('#my-alert').bind('closed', function () {
 &lt;/button&gt;
 
 &lt;div id="demo" class="collapse in"&gt; … &lt;/div&gt;</pre>
-         <p>{{_i}}<span class="label notice">Notice</span> To add accordion like group management to a collapsible control just add the additional data attribute <code>data-parent="#selector"</code>. Refer to the demo below to see this in action.{{/i}}</p>
+          <div class="alert alert-info">
+            <strong>{{_i}}Heads up!{{/i}}</strong>
+            {{_i}}To add accordion-like group management to a collapsible control, add the data attribute <code>data-parent="#selector"</code>. Refer to the demo to see this in action.{{/i}}
+          </div>
           <h3>{{_i}}Methods{{/i}}</h3>
           <h4>.collapse({{_i}}options{{/i}})</h4>
           <p>{{_i}}Activates your content as a collapsible element. Accepts an optional options <code>object</code>.{{/i}}
@@ -1258,7 +1297,7 @@ $('.myCarousel').carousel({
           <h2>{{_i}}Example{{/i}}</h2>
           <p>{{_i}}Start typing in the field below to show the typeahead results.{{/i}}</p>
           <div class="well">
-            <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-data='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
+            <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
           </div>
           <hr>
           <h2>{{_i}}Using bootstrap-typeahead.js{{/i}}</h2>
@@ -1270,16 +1309,34 @@ $('.myCarousel').carousel({
              <tr>
                <th style="width: 100px;">{{_i}}Name{{/i}}</th>
                <th style="width: 50px;">{{_i}}type{{/i}}</th>
-               <th style="width: 50px;">{{_i}}default{{/i}}</th>
+               <th style="width: 90px;">{{_i}}default{{/i}}</th>
                <th>{{_i}}description{{/i}}</th>
              </tr>
             </thead>
             <tbody>
+              <tr>
+               <td>{{_i}}source{{/i}}</td>
+               <td>{{_i}}array{{/i}}</td>
+               <td>[ ]</td>
+               <td>{{_i}}The data source to query against.{{/i}}</td>
+             </tr>
              <tr>
                <td>{{_i}}items{{/i}}</td>
                <td>{{_i}}number{{/i}}</td>
                <td>8</td>
                <td>{{_i}}The max number of items to display in the dropdown.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}matcher{{/i}}</td>
+               <td>{{_i}}function{{/i}}</td>
+               <td>case sensitive</td>
+               <td>{{_i}}The method used to determine if a query matches an item. Accepts a single argument, the <code>item</code> against which to test the query. Access the current query with <code>this.query</code>. Return a boolean <code>true</code> if query is a match.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}sorter{{/i}}</td>
+               <td>{{_i}}function{{/i}}</td>
+               <td>no sort</td>
+               <td>{{_i}}Method used to sort autocomplete results. Accepts a single argument <code>items</code> and has the scope of the typeahead instance. Reference the current query with <code>this.query</code>.{{/i}}</td>
              </tr>
             </tbody>
           </table>
@@ -1289,6 +1346,9 @@ $('.myCarousel').carousel({
 <pre class="prettyprint linenums">
 &lt;input type="text" data-provide="typeahead"&gt;
 </pre>
+          <h3>{{_i}}Methods{{/i}}</h3>
+          <h4>.typeahead({{_i}}options{{/i}})</h4>
+          <p>{{_i}}Initializes an input with a typahead.{{/i}}</p>
         </div>
       </div>
     </section>

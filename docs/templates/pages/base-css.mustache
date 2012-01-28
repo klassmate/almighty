@@ -6,6 +6,7 @@
   <div class="subnav">
     <ul class="nav pills">
       <li><a href="#typography">{{_i}}Typography{{/i}}</a></li>
+      <li><a href="#code">{{_i}}Code{{/i}}</a></li>
       <li><a href="#tables">{{_i}}Tables{{/i}}</a></li>
       <li><a href="#forms">{{_i}}Forms{{/i}}</a></li>
       <li><a href="#buttons">{{_i}}Buttons{{/i}}</a></li>
@@ -278,104 +279,46 @@
       </dl>
     </div>
   </div><!-- /row -->
+</section>
 
 
-  <!-- Code -->
 
-  <h2>{{_i}}Code <small>Inline and block</small>{{/i}}</h2>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th style="width: 190px;">{{_i}}Element{{/i}}</th>
-        <th>{{_i}}Result{{/i}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>&lt;code&gt;</code></td>
-        <td>{{_i}}In a line of text like this, your wrapped code will look like this <code>&lt;html&gt;</code> element.{{/i}}</td>
-      </tr>
-      <tr>
-        <td><code>&lt;pre&gt;</code></td>
-        <td>
-<pre>&lt;div&gt;
-  &lt;h1&gt;{{_i}}Heading{{/i}}&lt;/h1&gt;
-  &lt;p&gt;{{_i}}Something right here…{{/i}}&lt;/p&gt;
-&lt;/div&gt;</pre>
-          <p>{{_i}}<strong>Note:</strong> Be sure to keep code within <code>&lt;pre&gt;</code> tags as close to the left as possible; it will render all tabs.{{/i}}</p>
-        </td>
-      </tr>
-      <tr>
-        <td><code>&lt;pre class="prettyprint"&gt;</code></td>
-        <td>
-          <p>{{_i}}Using the google-code-prettify library, your blocks of code get a slightly different visual style and automatic syntax highlighting. You can also add an additional class to add line numbers.{{/i}}</p>
-<pre class="prettyprint">&lt;div&gt;
-  &lt;h1&gt;{{_i}}Heading{{/i}}&lt;/h1&gt;
-  &lt;p&gt;{{_i}}Something right here…{{/i}}&lt;/p&gt;
-&lt;/div&gt;</pre>
-<pre class="prettyprint linenums">&lt;div&gt;
-  &lt;h1&gt;{{_i}}Heading{{/i}}&lt;/h1&gt;
-  &lt;p&gt;{{_i}}Something right here…{{/i}}&lt;/p&gt;
-&lt;/div&gt;</pre>
-          <p>{{_i}}<a href="http://code.google.com/p/google-code-prettify/">Download google-code-prettify</a> and view the readme for <a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html">how to use</a>.{{/i}}</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- Labels -->
-  <h2>{{_i}}Inline labels <small>for special attention</small>{{/i}}</h2>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th style="width: 190px;">{{_i}}Labels{{/i}}</th>
-        <th>{{_i}}Markup{{/i}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <span class="label">{{_i}}Default{{/i}}</span>
-        </td>
-        <td>
-          <code>&lt;span class="label"&gt;{{_i}}Default{{/i}}&lt;/span&gt;</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="label success">{{_i}}New{{/i}}</span>
-        </td>
-        <td>
-          <code>&lt;span class="label success"&gt;{{/_i}}New{{/i}}&lt;/span&gt;</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="label warning">{{_i}}Warning{{/i}}</span>
-        </td>
-        <td>
-          <code>&lt;span class="label warning"&gt;{{_i}}Warning{{/i}}&lt;/span&gt;</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="label important">{{_i}}Important{{/i}}</span>
-        </td>
-        <td>
-          <code>&lt;span class="label important"&gt;{{_i}}Important{{/i}}&lt;/span&gt;</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="label info">{{_i}}Info{{/i}}</span>
-        </td>
-        <td>
-          <code>&lt;span class="label info"&gt;{{_i}}Info{{/i}}&lt;/span&gt;</code>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
+<!-- Code
+================================================== -->
+<section id="code">
+  <div class="page-header">
+    <h1>{{_i}}Code{{/i}} <small>{{_i}}Inline and block code snippets{{/i}}</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h2>Inline</h2>
+      <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+<pre class="prettyprint linenums">
+{{_i}}For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.{{/i}}
+</pre>
+    </div><!--/span-->
+    <div class="span4">
+      <h2>Basic block</h2>
+      <p>{{_i}}Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to turn any carets into their unicode characters for proper rendering.{{/i}}</p>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+&lt;pre&gt;
+  &amp;lt;p&amp;gt;{{_i}}Sample text here...{{/i}}&amp;lt;/p&amp;gt;
+&lt;/pre&gt;
+</pre>
+      <p>{{_i}}<strong>Note:</strong> Be sure to keep code within <code>&lt;pre&gt;</code> tags as close to the left as possible; it will render all tabs.{{/i}}</p>
+    </div><!--/span-->
+    <div class="span4">
+      <h2>Google Prettify</h2>
+      <p>Take the same <code>&lt;pre&gt;</code> element and add two optional classes for enhanced rendering.</p>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+&lt;pre class="prettyprint
+     linenums"&gt;
+  &amp;lt;p&amp;gt;{{_i}}Sample text here...{{/i}}&amp;lt;/p&amp;gt;
+&lt;/pre&gt;
+</pre>
+      <p>{{_i}}<a href="http://code.google.com/p/google-code-prettify/">Download google-code-prettify</a> and view the readme for <a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html">how to use</a>.{{/i}}</p>
+    </div><!--/span-->
+  </div><!--/row-->
 </section>
 
 
@@ -970,6 +913,12 @@
             </div>
           </div>
           <div class="control-group">
+            <label class="control-label">Uneditable input</label>
+            <div class="controls">
+              <span class="input-xlarge uneditable-input">Some value here</span>
+            </div>
+          </div>
+          <div class="control-group">
             <label class="control-label" for="disabledInput">{{_i}}Disabled input{{/i}}</label>
             <div class="controls">
               <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="{{_i}}Disabled input here…{{/i}}" disabled>
@@ -1052,9 +1001,9 @@
           <div class="control-group">
             <label class="control-label">{{_i}}Form sizes{{/i}}</label>
             <div class="controls docs-input-sizes">
+              <input class="span1" type="text" placeholder=".span1">
               <input class="span2" type="text" placeholder=".span2">
               <input class="span3" type="text" placeholder=".span3">
-              <input class="span4" type="text" placeholder=".span4">
               <p class="help-block">{{_i}}Use the same <code>.span*</code> classes from the grid system for input sizes.{{/i}}</p>
             </div>
           </div>
@@ -1273,10 +1222,6 @@
         <i class="icon home"></i>
         <i class="icon file"></i>
         <i class="icon time"></i>
-      </div>
-    </div>
-    <div class="span3">
-      <div class="the-icons">
         <i class="icon road"></i>
         <i class="icon download-alt"></i>
         <i class="icon download"></i>
@@ -1284,8 +1229,12 @@
         <i class="icon inbox"></i>
         <i class="icon play-circle"></i>
         <i class="icon repeat"></i>
+      </div>
+    </div>
+    <div class="span3">
+      <div class="the-icons">
         <i class="icon refresh"></i>
-        <i class="icon calendar"></i>
+        <i class="icon list-alt"></i>
         <i class="icon lock"></i>
         <i class="icon flag"></i>
         <i class="icon headphones"></i>
@@ -1301,10 +1250,6 @@
         <i class="icon bookmark"></i>
         <i class="icon print"></i>
         <i class="icon camera"></i>
-      </div>
-    </div>
-    <div class="span3">
-      <div class="the-icons">
         <i class="icon font"></i>
         <i class="icon bold"></i>
         <i class="icon italic"></i>
@@ -1319,7 +1264,10 @@
         <i class="icon indent-right"></i>
         <i class="icon facetime-video"></i>
         <i class="icon picture"></i>
-
+      </div>
+    </div>
+    <div class="span3">
+      <div class="the-icons">
         <i class="icon pencil"></i>
         <i class="icon map-marker"></i>
         <i class="icon adjust"></i>
@@ -1329,10 +1277,6 @@
         <i class="icon check"></i>
         <i class="icon move"></i>
         <i class="icon step-backward"></i>
-      </div>
-    </div>
-    <div class="span3">
-      <div class="the-icons">
         <i class="icon fast-backward"></i>
         <i class="icon backward"></i>
         <i class="icon play"></i>
@@ -1345,6 +1289,20 @@
         <i class="icon chevron-left"></i>
         <i class="icon chevron-right"></i>
 
+        <i class="icon plus-sign"></i>
+        <i class="icon minus-sign"></i>
+        <i class="icon remove-sign"></i>
+        <i class="icon ok-sign"></i>
+        <i class="icon question-sign"></i>
+        <i class="icon info-sign"></i>
+        <i class="icon screenshot"></i>
+        <i class="icon remove-circle"></i>
+        <i class="icon ok-circle"></i>
+        <i class="icon ban-circle"></i>
+      </div>
+    </div>
+    <div class="span3">
+      <div class="the-icons">
         <i class="icon arrow-left"></i>
         <i class="icon arrow-right"></i>
         <i class="icon arrow-up"></i>
@@ -1355,11 +1313,32 @@
         <i class="icon plus"></i>
         <i class="icon minus"></i>
         <i class="icon asterisk"></i>
+
+        <i class="icon exclamation-sign"></i>
+        <i class="icon gift"></i>
+        <i class="icon leaf"></i>
+        <i class="icon fire"></i>
+        <i class="icon eye-open"></i>
+        <i class="icon eye-close"></i>
+        <i class="icon warning-sign"></i>
+        <i class="icon plane"></i>
+        <i class="icon calendar"></i>
+        <i class="icon random"></i>
+        <i class="icon comment"></i>
+        <i class="icon magnet"></i>
+        <i class="icon chevron-up"></i>
+        <i class="icon chevron-down"></i>
+        <i class="icon retweet"></i>
+        <i class="icon shopping-cart"></i>
+        <i class="icon folder-close"></i>
+        <i class="icon folder-open"></i>
+        <i class="icon resize-vertical"></i>
+        <i class="icon resize-horizontal"></i>
       </div>
     </div>
   </div>
   <div class="alert alert-info">
-    {{_i}}<strong>Heads up!</strong> On hover we show a light red background color to highlight the size of the icon. This won't appear in normal usage of icons.{{/i}}
+    {{_i}}<strong>Heads up!</strong> Icon classes are echoed via CSS <code>:after</code> and on hover in the docs we show a light red background color show the icon's size.{{/i}}
   </div>
 
   <br>
@@ -1376,14 +1355,18 @@
 <pre class="prettyprint linenums">
 &lt;i class="icon search"&gt;&lt;/i&gt;
 </pre>
-      <p>{{_i}}There are over 100 classes to choose from for your icons. Just add an <code>&lt;i&gt;</code> tag with the right classes and you're set. You can find the full list in <strong>sprites.less</strong> or right here in this document.{{/i}}</p>
+      <p>{{_i}}There are also styles available for inverted (white) icons, made ready with one extra class:{{/i}}</p>
+<pre class="prettyprint linenums">
+&lt;i class="icon white search"&gt;&lt;/i&gt;
+</pre>
+      <p>{{_i}}There are 120 classes to choose from for your icons. Just add an <code>&lt;i&gt;</code> tag with the right classes and you're set. You can find the full list in <strong>sprites.less</strong> or right here in this document.{{/i}}</p>
     </div>
     <div class="span4">
       <h3>{{_i}}Use cases{{/i}}</h3>
       <p>{{_i}}Icons are great, but where would one use them? Here are a few ideas:{{/i}}</p>
       <ul>
         <li>{{_i}}As visuals for your sidebar navigation{{/i}}</li>
-        <li>{{_i}}For a purely icon-driven nav{{/i}}</li>
+        <li>{{_i}}For a purely icon-driven navigation{{/i}}</li>
         <li>{{_i}}For buttons to help convey the meaning of an action{{/i}}</li>
         <li>{{_i}}With links to share context on a user's destination{{/i}}</li>
       </ul>
@@ -1392,36 +1375,61 @@
   </div>
 
   <h3>{{_i}}Examples{{/i}}</h3>
+  <p>{{_i}}Use them in buttons, button groups for a toolbar, navigation, or prepended form inputs.{{/i}}</p>
   <div class="row">
     <div class="span4">
-      <p>{{_i}}Use them in buttons, or in button groups for a toolbar style presentation.{{/i}}</p>
-      <p>
-        <a class="btn" href="#"><i class="icon refresh"></i> {{_i}}Refresh{{/i}}</a>
-        <a class="btn" href="#"><i class="icon cog"></i> {{_i}}Settings{{/i}}</a>
-      </p>
-      <div class="btn-toolbar">
-        <div class="btn-group">
-          <a class="btn" href="#"><i class="icon font"></i></a>
-          <a class="btn" href="#"><i class="icon bold"></i></a>
-          <a class="btn" href="#"><i class="icon italic"></i></a>
-        </div>
+      <div class="btn-toolbar" style="margin-bottom: 9px">
         <div class="btn-group">
           <a class="btn" href="#"><i class="icon align-left"></i></a>
           <a class="btn" href="#"><i class="icon align-center"></i></a>
           <a class="btn" href="#"><i class="icon align-right"></i></a>
           <a class="btn" href="#"><i class="icon align-justify"></i></a>
         </div>
+        <div class="btn-group">
+          <a class="btn primary" href="#"><i class="icon white user"></i> {{_i}}User{{/i}}</a>
+          <a class="btn primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><i class="icon pencil"></i> {{_i}}Edit{{/i}}</a></li>
+            <li><a href="#"><i class="icon trash"></i> {{_i}}Delete{{/i}}</a></li>
+            <li><a href="#"><i class="icon ban-circle"></i> {{_i}}Ban{{/i}}</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="icon"></i> {{_i}}Make admin{{/i}}</a></li>
+          </ul>
+        </div>
       </div>
+      <p>
+        <a class="btn" href="#"><i class="icon refresh"></i> {{_i}}Refresh{{/i}}</a>
+        <a class="btn success" href="#"><i class="icon white shopping-cart"></i> {{_i}}Checkout{{/i}}</a>
+        <a class="btn danger" href="#"><i class="icon white trash"></i> {{_i}}Delete{{/i}}</a>
+      </p>
+      <p>
+        <a class="btn large" href="#"><i class="icon comment"></i> {{_i}}Comment{{/i}}</a>
+        <a class="btn small" href="#"><i class="icon cog"></i> {{_i}}Settings{{/i}}</a>
+        <a class="btn small info" href="#"><i class="icon white info-sign"></i> {{_i}}More Info{{/i}}</a>
+      </p>
     </div>
-    <div class="span3">
-      <p>{{_i}}Or, use them in navigation.{{/i}}</p>
+    <div class="span4">
       <div class="well" style="padding: 8px 0;">
         <ul class="nav list">
           <li class="active"><a href="#"><i class="icon white home"></i> {{_i}}Home{{/i}}</a></li>
           <li><a href="#"><i class="icon book"></i> {{_i}}Library{{/i}}</a></li>
           <li><a href="#"><i class="icon pencil"></i> {{_i}}Applications{{/i}}</a></li>
+          <li><a href="#"><i class="icon"></i> {{_i}}Misc{{/i}}</a></li>
         </ul>
       </div> <!-- /well -->
+    </div>
+    <div class="span4">
+      <form>
+        <div class="control-group">
+          <label class="control-label" for="prependedInput">{{_i}}Email address{{/i}}</label>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon envelope"></i></span>
+              <input class="span32" id="iconInput" size="16" type="text">
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </section>
