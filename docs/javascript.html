@@ -26,37 +26,44 @@
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
-  
-  
+
+
   <!-- Navbar
     ================================================== -->
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="i-bar"></span>
+            <span class="i-bar"></span>
+            <span class="i-bar"></span>
+          </a>
           <a class="brand" href="./index.html">Bootstrap</a>
-          <ul class="nav">
-            <li class="">
-              <a href="./index.html">Overview</a>
-            </li>
-            <li class="">
-              <a href="./scaffolding.html">Scaffolding</a>
-            </li>
-            <li class="">
-              <a href="./base-css.html">Base CSS</a>
-            </li>
-            <li class="">
-              <a href="./components.html">Components</a>
-            </li>
-            <li class="active">
-              <a href="./javascript.html">Javascript plugins</a>
-            </li>
-            <li class="">
-              <a href="./less.html">Using LESS</a>
-            </li>
-            <li class="">
-              <a href="./download.html">Customize</a>
-            </li>
-          </ul>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Overview</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Scaffolding</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Components</a>
+              </li>
+              <li class="active">
+                <a href="./javascript.html">Javascript plugins</a>
+              </li>
+              <li class="">
+                <a href="./less.html">Using LESS</a>
+              </li>
+              <li class="">
+                <a href="./download.html">Customize</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -743,16 +750,10 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                <td>number | object</td>
                <td>0</td>
                <td>
-                <p>delay showing/hiding the tooltip (ms)</p>
+                <p>delay showing and hiding the tooltip (ms)</p>
                 <p>If a number is supplied, delay is applied to both hide/show</p>
                 <p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
                </td>
-             </tr>
-             <tr>
-               <td>z-index</td>
-               <td>number</td>
-               <td>1020</td>
-               <td>The tooltips z-index value</td>
              </tr>
             </tbody>
           </table>
@@ -855,16 +856,10 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                <td>number | object</td>
                <td>0</td>
                <td>
-                <p>delay showing/hiding the popover (ms)</p>
+                <p>delay showing and hiding the popover (ms)</p>
                 <p>If a number is supplied, delay is applied to both hide/show</p>
                 <p>Object structure is: <code>delay: { show: 500, hide: 100 }</code></p>
                </td>
-             </tr>
-             <tr>
-               <td>z-index</td>
-               <td>number</td>
-               <td>1010</td>
-               <td>The popovers z-index value</td>
              </tr>
             </tbody>
           </table>
@@ -1086,7 +1081,7 @@ $('#my-alert').bind('closed', function () {
         <div class="span9 columns">
           <h2>Example accordion</h2>
           <p>Using the collapse plugin, we built a simple accordion style widget:</p>
-        
+
           <div class="accordion" id="accordion2">
             <div class="accordion-group">
               <div class="accordion-heading">
@@ -1126,7 +1121,7 @@ $('#my-alert').bind('closed', function () {
             </div>
           </div>
 
-          
+
           <hr>
           <h2>Using bootstrap-collapse.js</h2>
           <p>Enable via javascript:</p>
@@ -1374,7 +1369,7 @@ $('.myCarousel').carousel({
              <tr>
                <th style="width: 100px;">Name</th>
                <th style="width: 50px;">type</th>
-               <th style="width: 90px;">default</th>
+               <th style="width: 100px;">default</th>
                <th>description</th>
              </tr>
             </thead>
@@ -1394,14 +1389,20 @@ $('.myCarousel').carousel({
              <tr>
                <td>matcher</td>
                <td>function</td>
-               <td>case sensitive</td>
+               <td>case insensitive</td>
                <td>The method used to determine if a query matches an item. Accepts a single argument, the <code>item</code> against which to test the query. Access the current query with <code>this.query</code>. Return a boolean <code>true</code> if query is a match.</td>
              </tr>
              <tr>
                <td>sorter</td>
                <td>function</td>
-               <td>no sort</td>
+               <td>exact match,<br> case sensitive,<br> case insensitive</td>
                <td>Method used to sort autocomplete results. Accepts a single argument <code>items</code> and has the scope of the typeahead instance. Reference the current query with <code>this.query</code>.</td>
+             </tr>
+             <tr>
+               <td>highlighter</td>
+               <td>function</td>
+               <td>highlights all default matches</td>
+               <td>Method used to highlight autocomplete results. Accepts a single argument <code>item</code> and has the scope of the typeahead instance. Should return html.</td>
              </tr>
             </tbody>
           </table>

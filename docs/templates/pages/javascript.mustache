@@ -678,16 +678,10 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                <td>{{_i}}number | object{{/i}}</td>
                <td>0</td>
                <td>
-                <p>{{_i}}delay showing/hiding the tooltip (ms){{/i}}</p>
+                <p>{{_i}}delay showing and hiding the tooltip (ms){{/i}}</p>
                 <p>{{_i}}If a number is supplied, delay is applied to both hide/show{{/i}}</p>
                 <p>{{_i}}Object structure is: <code>delay: { show: 500, hide: 100 }</code>{{/i}}</p>
                </td>
-             </tr>
-             <tr>
-               <td>{{_i}}z-index{{/i}}</td>
-               <td>{{_i}}number{{/i}}</td>
-               <td>1020</td>
-               <td>The tooltips z-index value</td>
              </tr>
             </tbody>
           </table>
@@ -790,16 +784,10 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
                <td>{{_i}}number | object{{/i}}</td>
                <td>0</td>
                <td>
-                <p>{{_i}}delay showing/hiding the popover (ms){{/i}}</p>
+                <p>{{_i}}delay showing and hiding the popover (ms){{/i}}</p>
                 <p>{{_i}}If a number is supplied, delay is applied to both hide/show{{/i}}</p>
                 <p>{{_i}}Object structure is: <code>delay: { show: 500, hide: 100 }</code>{{/i}}</p>
                </td>
-             </tr>
-             <tr>
-               <td>{{_i}}z-index{{/i}}</td>
-               <td>{{_i}}number{{/i}}</td>
-               <td>1010</td>
-               <td>The popovers z-index value</td>
              </tr>
             </tbody>
           </table>
@@ -1021,7 +1009,7 @@ $('#my-alert').bind('closed', function () {
         <div class="span9 columns">
           <h2>{{_i}}Example accordion{{/i}}</h2>
           <p>{{_i}}Using the collapse plugin, we built a simple accordion style widget:{{/i}}</p>
-        
+
           <div class="accordion" id="accordion2">
             <div class="accordion-group">
               <div class="accordion-heading">
@@ -1061,7 +1049,7 @@ $('#my-alert').bind('closed', function () {
             </div>
           </div>
 
-          
+
           <hr>
           <h2>{{_i}}Using bootstrap-collapse.js{{/i}}</h2>
           <p>Enable via javascript:</p>
@@ -1309,7 +1297,7 @@ $('.myCarousel').carousel({
              <tr>
                <th style="width: 100px;">{{_i}}Name{{/i}}</th>
                <th style="width: 50px;">{{_i}}type{{/i}}</th>
-               <th style="width: 90px;">{{_i}}default{{/i}}</th>
+               <th style="width: 100px;">{{_i}}default{{/i}}</th>
                <th>{{_i}}description{{/i}}</th>
              </tr>
             </thead>
@@ -1329,14 +1317,20 @@ $('.myCarousel').carousel({
              <tr>
                <td>{{_i}}matcher{{/i}}</td>
                <td>{{_i}}function{{/i}}</td>
-               <td>case sensitive</td>
+               <td>{{_i}}case insensitive{{/i}}</td>
                <td>{{_i}}The method used to determine if a query matches an item. Accepts a single argument, the <code>item</code> against which to test the query. Access the current query with <code>this.query</code>. Return a boolean <code>true</code> if query is a match.{{/i}}</td>
              </tr>
              <tr>
                <td>{{_i}}sorter{{/i}}</td>
                <td>{{_i}}function{{/i}}</td>
-               <td>no sort</td>
+               <td>{{_i}}exact match,<br> case sensitive,<br> case insensitive{{/i}}</td>
                <td>{{_i}}Method used to sort autocomplete results. Accepts a single argument <code>items</code> and has the scope of the typeahead instance. Reference the current query with <code>this.query</code>.{{/i}}</td>
+             </tr>
+             <tr>
+               <td>{{_i}}highlighter{{/i}}</td>
+               <td>{{_i}}function{{/i}}</td>
+               <td>{{_i}}highlights all default matches{{/i}}</td>
+               <td>{{_i}}Method used to highlight autocomplete results. Accepts a single argument <code>item</code> and has the scope of the typeahead instance. Should return html.{{/i}}</td>
              </tr>
             </tbody>
           </table>

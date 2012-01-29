@@ -26,37 +26,44 @@
   </head>
 
   <body data-spy="scroll" data-target=".subnav" data-offset="50">
-  
-  
+
+
   <!-- Navbar
     ================================================== -->
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="i-bar"></span>
+            <span class="i-bar"></span>
+            <span class="i-bar"></span>
+          </a>
           <a class="brand" href="./index.html">Bootstrap</a>
-          <ul class="nav">
-            <li class="">
-              <a href="./index.html">Overview</a>
-            </li>
-            <li class="">
-              <a href="./scaffolding.html">Scaffolding</a>
-            </li>
-            <li class="active">
-              <a href="./base-css.html">Base CSS</a>
-            </li>
-            <li class="">
-              <a href="./components.html">Components</a>
-            </li>
-            <li class="">
-              <a href="./javascript.html">Javascript plugins</a>
-            </li>
-            <li class="">
-              <a href="./less.html">Using LESS</a>
-            </li>
-            <li class="">
-              <a href="./download.html">Customize</a>
-            </li>
-          </ul>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Overview</a>
+              </li>
+              <li class="">
+                <a href="./scaffolding.html">Scaffolding</a>
+              </li>
+              <li class="active">
+                <a href="./base-css.html">Base CSS</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Components</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">Javascript plugins</a>
+              </li>
+              <li class="">
+                <a href="./less.html">Using LESS</a>
+              </li>
+              <li class="">
+                <a href="./download.html">Customize</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -1128,11 +1135,11 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
             <label class="control-label">Radio buttons</label>
             <div class="controls">
               <label class="radio">
-                <input type="radio" id="optionsRadios1" value="option1" checked>
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
                 Option one is this and that&mdash;be sure to include why it’s great
               </label>
               <label class="radio">
-                <input type="radio" id="optionsRadios2" value="option2">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
                 Option two can is something else and selecting it will deselect option one
               </label>
             </div>
@@ -1490,7 +1497,7 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
           <div class="controls">
             <div class="input-prepend">
               <span class="add-on"><i class="icon envelope"></i></span>
-              <input class="span32" id="iconInput" size="16" type="text">
+              <input class="span2" id="iconInput" type="text">
             </div>
           </div>
         </div>
