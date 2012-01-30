@@ -4,44 +4,46 @@
 ul.timeline {
   list-style: none;
   margin-left: 0;
-  p {
-    margin:0;
-    padding:0;
-  }
   li {
-    margin-bottom: 1px;
     dl {
-      margin-bottom: 0;
-      &[class*="span"] {
-        margin-left: 10px;
-      }
+      margin: 0 0 -1em 0;
       dt {
-        font-weight: bold;
         display: inline;
         color: @themeColor;
-        margin-right: 4px;
+        font-weight: bold;
       }
       dd {
-        margin: 0;
         display: inline;
       }
     }
   }
-  .span07 {
-    .columns(0.7);
+  .timeline-profile {
+    text-align: center;
+    padding-top: 3px;
+    width: 30px;
+    float: left;
+    img {
+      width: 30px;
+    }
   }
-  .span08 {
-    .columns(0.8);
+  .timeline-content {
+    margin-left: 40px;
   }
-  .datetime {
+  .timeline-datetime {
     color: @grayLight;
     text-align: right;
     font-style: italic;
   }
-  /* for comments */
+  // for comments
   ul {
-    list-style:none;
-    margin-left: (@gridColumnWidth * 0.5) + (@gridGutterWidth * (0.5 - 1));
+    list-style: none;
+    margin-left: 10px;
     margin-top: 1px;
+
+    .timeline-profile {
+      img {
+        width:26px;
+      }
+    }
   }
 }
