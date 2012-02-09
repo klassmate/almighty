@@ -34,9 +34,9 @@
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="i-bar"></span>
-            <span class="i-bar"></span>
-            <span class="i-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </a>
           <a class="brand" href="./index.html">Bootstrap</a>
           <div class="nav-collapse">
@@ -59,8 +59,12 @@
               <li class="active">
                 <a href="./less.html">Using LESS</a>
               </li>
+              <li class="divider-vertical"></li>
               <li class="">
                 <a href="./download.html">Customize</a>
+              </li>
+              <li class="">
+                <a href="./examples.html">Examples</a>
               </li>
             </ul>
           </div>
@@ -70,17 +74,13 @@
 
     <div class="container">
 
-<div class="alert">
-  <strong>Heads up!</strong> This page is still under construction and is missing plenty of documentation. Hang tight!
-</div>
-
 <!-- Masthead
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
   <h1>Using LESS with Bootstrap</h1>
   <p class="lead">Customize and extend Bootstrap with <a href="http://lesscss.org" target="_blank">LESS</a>, a CSS preprocessor, to take advantage of the variables, mixins, and more used to build Bootstrap's CSS.</p>
   <div class="subnav">
-    <ul class="nav pills">
+    <ul class="nav nav-pills">
       <li><a href="#builtWith">Built with Less</a></li>
       <li><a href="#variables">Variables</a></li>
       <li><a href="#mixins">Mixins</a></li>
@@ -100,7 +100,7 @@
   <div class="row">
     <div class="span4">
       <h3>Why LESS?</h3>
-      <p>Bootstrap is made with LESS at it's core, a dynamic stylesheet language created by our good friend, <a href="http://cloudhead.io">Alexis Sellier</a>. It makes developing systems-based CSS faster, easier, and more fun.</p>
+      <p>Bootstrap is made with LESS at its core, a dynamic stylesheet language created by our good friend, <a href="http://cloudhead.io">Alexis Sellier</a>. It makes developing systems-based CSS faster, easier, and more fun.</p>
     </div>
     <div class="span4">
       <h3>What's included?</h3>
@@ -172,8 +172,12 @@
             <td>20px</td>
           </tr>
           <tr>
-            <td><code>@siteWidth</code></td>
-            <td><code>(@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1))</code></td>
+            <td><code>@fluidGridColumnWidth</code></td>
+            <td>6.382978723%</td>
+          </tr>
+          <tr>
+            <td><code>@fluidGridGutterWidth</code></td>
+            <td>2.127659574%</td>
           </tr>
         </tbody>
       </table>
@@ -187,7 +191,6 @@
           <tr>
             <td><code>@baseFontFamily</code></td>
             <td><code>"Helvetica Neue", Helvetica, Arial, sans-serif</code></td>
-            <td></td>
           </tr>
           <tr>
             <td><code>@baseLineHeight</code></td>
@@ -771,20 +774,22 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="../js/tests/vendor/jquery.js"></script>
+    <script src="assets/js/jquery.js"></script>
     <script src="assets/js/google-code-prettify/prettify.js"></script>
-    <script src="../js/bootstrap-transition.js"></script>
-    <script src="../js/bootstrap-alert.js"></script>
-    <script src="../js/bootstrap-modal.js"></script>
-    <script src="../js/bootstrap-dropdown.js"></script>
-    <script src="../js/bootstrap-scrollspy.js"></script>
-    <script src="../js/bootstrap-tab.js"></script>
-    <script src="../js/bootstrap-tooltip.js"></script>
-    <script src="../js/bootstrap-popover.js"></script>
-    <script src="../js/bootstrap-button.js"></script>
-    <script src="../js/bootstrap-collapse.js"></script>
-    <script src="../js/bootstrap-carousel.js"></script>
-    <script src="../js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/application.js"></script>
+
+
   </body>
 </html>

@@ -34,9 +34,9 @@
       <div class="navbar-inner">
         <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="i-bar"></span>
-            <span class="i-bar"></span>
-            <span class="i-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </a>
           <a class="brand" href="./index.html">Bootstrap</a>
           <div class="nav-collapse">
@@ -59,8 +59,12 @@
               <li class="">
                 <a href="./less.html">Using LESS</a>
               </li>
+              <li class="divider-vertical"></li>
               <li class="">
                 <a href="./download.html">Customize</a>
+              </li>
+              <li class="">
+                <a href="./examples.html">Examples</a>
               </li>
             </ul>
           </div>
@@ -76,7 +80,7 @@
         <h1>Javascript for Bootstrap</h1>
         <p class="lead">Bring Bootstrap's components to life&mdash;now with 12 custom <a href="http://jquery.com/" target="_blank">jQuery</a> plugins.
         <div class="subnav">
-          <ul class="nav pills">
+          <ul class="nav nav-pills">
             <li><a href="#javascript">All plugins</a></li>
             <li><a href="#modals">Modal</a></li>
             <li><a href="#dropdowns">Dropdown</a></li>
@@ -195,7 +199,7 @@
         <div class="span3 columns">
           <h3>About modals</h3>
           <p>A streamlined, but flexible, take on the traditional javascript modal plugin with only the minimum required functionality and smart defaults.</p>
-          <a href="../js/bootstrap-modal.js" target="_blank" class="btn">Download file</a>
+          <a href="assets/js/bootstrap-modal.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Static example</h2>
@@ -210,7 +214,7 @@
                 <p>One fine body…</p>
               </div>
               <div class="modal-footer">
-                <a href="#" class="btn primary">Save changes</a>
+                <a href="#" class="btn btn-primary">Save changes</a>
                 <a href="#" class="btn">Close</a>
               </div>
             </div>
@@ -235,11 +239,11 @@
               <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.</p>
             </div>
             <div class="modal-footer">
-              <a href="#" class="btn primary">Save changes</a>
+              <a href="#" class="btn btn-primary">Save changes</a>
               <a href="#" class="btn" data-dismiss="modal" >Close</a>
             </div>
           </div>
-          <a data-toggle="modal" href="#myModal" class="btn primary large">Launch demo modal</a>
+          <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large">Launch demo modal</a>
 
           <hr>
 
@@ -269,6 +273,12 @@
                <td>true</td>
                <td>Closes the modal when escape key is pressed</td>
              </tr>
+             <tr>
+               <td>show</td>
+               <td>boolean</td>
+               <td>true</td>
+               <td>Shows the modal when initialized.</td>
+             </tr>
             </tbody>
           </table>
           <h3>Markup</h3>
@@ -288,7 +298,7 @@
     &lt;p&gt;One fine body…&lt;/p&gt;
   &lt;/div&gt;
   &lt;div class="modal-footer"&gt;
-    &lt;a href="#" class="btn primary"&gt;Save changes&lt;/a&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;Save changes&lt;/a&gt;
     &lt;a href="#" class="btn"&gt;Close&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -361,7 +371,7 @@ $('#myModal').on('hidden', function () {
         <div class="span3 columns">
           <h3>About dropdowns</h3>
           <p>Add dropdown menus to nearly anything in Bootstrap with this simple plugin. Bootstrap features full dropdown menu support on in the navbar, tabs, and pills.</p>
-          <a href="../js/bootstrap-dropdown.js" target="_blank" class="btn">Download file</a>
+          <a href="assets/js/bootstrap-dropdown.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Examples</h2>
@@ -408,7 +418,7 @@ $('#myModal').on('hidden', function () {
             </div>
           </div> <!-- /navbar-example -->
 
-          <ul class="nav pills">
+          <ul class="nav nav-pills">
             <li class="active"><a href="#">Regular link</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
@@ -489,7 +499,7 @@ $('#myModal').on('hidden', function () {
       <div class="row">
         <div class="span3 columns">
           <p>The ScrollSpy plugin is for automatically updating nav targets based on scroll position.</p>
-          <a href="../js/bootstrap-scrollspy.js" target="_blank" class="btn">Download file</a>
+          <a href="assets/js/bootstrap-scrollspy.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Example navbar with scrollspy</h2>
@@ -583,12 +593,12 @@ $('#myModal').on('hidden', function () {
       <div class="row">
         <div class="span3 columns">
           <p>This plugin adds quick, dynamic tab and pill functionality for transitioning through local content.</p>
-          <a href="../js/bootstrap-tab.js" target="_blank" class="btn">Download file</a>
+          <a href="assets/js/bootstrap-tab.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Example tabs</h2>
           <p>Click the tabs below to toggle between hidden panes, even via dropdown menus.</p>
-          <ul id="tab" class="nav tabs">
+          <ul id="tab" class="nav nav-tabs">
             <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
             <li><a href="#profile" data-toggle="tab">Profile</a></li>
             <li class="dropdown">
@@ -691,7 +701,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
         <div class="span3 columns">
           <h3>About Tooltips</h3>
           <p>Inspired by the excellent jQuery.tipsy plugin written by Jason Frame; Tooltips are an updated version, which don't rely on images, uss css3 for animations, and data-attributes for local title storage.</p>
-          <a href="../js/bootstrap-tooltip.js" target="_blank" class="btn">Download file</a>
+          <a href="assets/js/bootstrap-tooltip.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Example use of Tooltips</h2>
@@ -792,13 +802,13 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <h3>About popovers</h3>
           <p>Add small overlays of content, like those on the iPad, to any element for housing secondary information.</p>
           <p class="muted"><strong>*</strong> Requires <a href="#tooltip">Tooltip</a> to be included</p>
-          <a href="../js/bootstrap-popover.js" target="_blank" class="btn">Download file</a>
+          <a href="assets/js/bootstrap-popover.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Example hover popover</h2>
           <p>Hover over the button to trigger the popover.</p>
           <div class="well">
-            <a href="#" class="btn danger" rel="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
+            <a href="#" class="btn btn-danger" rel="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">hover for popover</a>
           </div>
           <hr>
           <h2>Using bootstrap-popover.js</h2>
@@ -899,27 +909,27 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
         <div class="span3 columns">
           <h3>About alerts</h3>
           <p>The alert plugin is a tiny class for adding close functionality to alerts.</p>
-          <a href="../js/bootstrap-alert.js" target="_blank" class="btn">Download</a>
+          <a href="assets/js/bootstrap-alert.js" target="_blank" class="btn">Download</a>
         </div>
         <div class="span9 columns">
           <h2>Example alerts</h2>
           <p>The alerts plugin works on regular alert messages, and block messages.</p>
           <div class="alert fade in">
             <a class="close" data-dismiss="alert" href="#">&times;</a>
-            <strong>Holy guacamole!</strong> Best check yo self, you’re not looking too good.
+            <strong>Holy guacamole!</strong> Best check yo self, you're not looking too good.
           </div>
           <div class="alert alert-block alert-error fade in">
             <a class="close" data-dismiss="alert" href="#">&times;</a>
             <h4 class="alert-heading">Oh snap! You got an error!</h4>
             <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
             <p>
-              <a class="btn danger small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
+              <a class="btn btn-danger small" href="#">Take this action</a> <a class="btn small" href="#">Or do this</a>
             </p>
           </div>
           <hr>
           <h2>Using bootstrap-alerts.js</h2>
           <p>Enable dismissal of an alert via javascript:</p>
-          <pre class="prettyprint linenums">$(".alert-message").alert()</pre>
+          <pre class="prettyprint linenums">$(".alert").alert()</pre>
           <h3>Markup</h3>
           <p>Just add <code>data-dismiss="alert"</code> to your close button to automatically give an alert close functionality.</p>
           <pre class="prettyprint linenums">&lt;a class="close" data-dismiss="alert" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
@@ -928,7 +938,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
           <p>Wraps all alerts with close functionality. To have your alerts animate out when closed, make sure they have the <code>.fade</code> and <code>.in</code> class already applied to them.</p>
           <h4>.alert('close')</h4>
           <p>Closes an alert.</p>
-          <pre class="prettyprint linenums">$(".alert-message").alert('close')</pre>
+          <pre class="prettyprint linenums">$(".alert").alert('close')</pre>
           <h3>Events</h3>
           <p>Bootstrap's alert class exposes a few events for hooking into alert functionality.</p>
           <table class="table table-bordered table-striped">
@@ -969,7 +979,7 @@ $('#my-alert').bind('closed', function () {
         <div class="span3 columns">
           <h3>About</h3>
           <p>Do more with buttons. Control button states or create groups of buttons for more components like toolbars.</p>
-          <a href="../js/bootstrap-button.js" target="_blank" class="btn">Download file</a>
+          <a href="assets/js/bootstrap-button.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Example uses</h2>
@@ -979,7 +989,7 @@ $('#my-alert').bind('closed', function () {
              <tr>
                <td>Stateful</td>
                <td>
-                  <button id="fat-btn" data-loading-text="loading..." class="btn primary">
+                  <button id="fat-btn" data-loading-text="loading..." class="btn btn-primary">
                     Loading State
                   </button>
                 </td>
@@ -987,16 +997,16 @@ $('#my-alert').bind('closed', function () {
              <tr>
                <td>Single toggle</td>
                <td>
-                  <button class="btn primary" data-toggle="button">Single Toggle</button>
+                  <button class="btn btn-primary" data-toggle="button">Single Toggle</button>
                 </td>
              </tr>
              <tr>
                <td>Checkbox</td>
                <td>
                   <div class="btn-group" data-toggle="buttons-checkbox">
-                    <button class="btn primary">Left</button>
-                    <button class="btn primary">Middle</button>
-                    <button class="btn primary">Right</button>
+                    <button class="btn btn-primary">Left</button>
+                    <button class="btn btn-primary">Middle</button>
+                    <button class="btn btn-primary">Right</button>
                   </div>
                </td>
              </tr>
@@ -1004,9 +1014,9 @@ $('#my-alert').bind('closed', function () {
                <td>Radio</td>
                <td>
                   <div class="btn-group" data-toggle="buttons-radio">
-                    <button class="btn primary">Left</button>
-                    <button class="btn primary">Middle</button>
-                    <button class="btn primary">Right</button>
+                    <button class="btn btn-primary">Left</button>
+                    <button class="btn btn-primary">Middle</button>
+                    <button class="btn btn-primary">Right</button>
                   </div>
                </td>
              </tr>
@@ -1076,7 +1086,7 @@ $('#my-alert').bind('closed', function () {
         <div class="span3 columns">
           <h3>About</h3>
           <p>Get base styles and flexible support for collapsible components like accordions and navigation.</p>
-          <a href="../js/bootstrap-collapse.js" target="_blank" class="btn">Download file</a>
+          <a href="assets/js/bootstrap-collapse.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Example accordion</h2>
@@ -1154,7 +1164,7 @@ $('#my-alert').bind('closed', function () {
           <h3>Markup</h3>
           <p>Just add <code>data-toggle="collapse"</code> and a <code>data-target</code> to element to automatically assign control of a collapsible element. The <code>data-target</code> attribute accepts a css selector to apply the collapse to. Be sure to add the class <code>collapse</code> to the collapsible element. If you'd like it to default open, add the additional class <code>in</code>.</p>
           <pre class="prettyprint linenums">
-&lt;button class="btn danger" data-toggle="collapse" data-target="#demo"&gt;
+&lt;button class="btn btn-danger" data-toggle="collapse" data-target="#demo"&gt;
   simple collapsible
 &lt;/button&gt;
 
@@ -1229,7 +1239,7 @@ $('#myCollapsible').on('hidden', function () {
         <div class="span3 columns">
           <h3>About</h3>
           <p>A generic plugin for cycling through elements. A merry-go-round.</p>
-          <a href="../js/bootstrap-carousel.js" target="_blank" class="btn">Download file</a>
+          <a href="assets/js/bootstrap-carousel.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Example carousel</h2>
@@ -1261,6 +1271,10 @@ $('#myCollapsible').on('hidden', function () {
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
             <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
           </div>
+          <div class="alert alert-info">
+            <strong>Heads up!</strong>
+            When implementing this carousel, remove the images we have provided and replace them with your own.
+          </div>
           <hr>
           <h2>Using bootstrap-carousel.js</h2>
           <p>Call via javascript:</p>
@@ -1280,7 +1294,7 @@ $('#myCollapsible').on('hidden', function () {
                <td>interval</td>
                <td>number</td>
                <td>5000</td>
-               <td>The amount of type to delay between automatically cycling an item.</td>
+               <td>The amount of time to delay between automatically cycling an item.</td>
              </tr>
             </tbody>
           </table>
@@ -1351,7 +1365,7 @@ $('.myCarousel').carousel({
         <div class="span3 columns">
           <h3>About</h3>
           <p>A basic, easily extended plugin for quickly creating elegant typeaheads with any form text input.</p>
-          <a href="../js/bootstrap-typeahead.js" target="_blank" class="btn">Download file</a>
+          <a href="assets/js/bootstrap-typeahead.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Example</h2>
@@ -1436,20 +1450,22 @@ $('.myCarousel').carousel({
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="../js/tests/vendor/jquery.js"></script>
+    <script src="assets/js/jquery.js"></script>
     <script src="assets/js/google-code-prettify/prettify.js"></script>
-    <script src="../js/bootstrap-transition.js"></script>
-    <script src="../js/bootstrap-alert.js"></script>
-    <script src="../js/bootstrap-modal.js"></script>
-    <script src="../js/bootstrap-dropdown.js"></script>
-    <script src="../js/bootstrap-scrollspy.js"></script>
-    <script src="../js/bootstrap-tab.js"></script>
-    <script src="../js/bootstrap-tooltip.js"></script>
-    <script src="../js/bootstrap-popover.js"></script>
-    <script src="../js/bootstrap-button.js"></script>
-    <script src="../js/bootstrap-collapse.js"></script>
-    <script src="../js/bootstrap-carousel.js"></script>
-    <script src="../js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
     <script src="assets/js/application.js"></script>
+
+
   </body>
 </html>
