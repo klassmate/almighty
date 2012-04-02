@@ -64,8 +64,8 @@
 @zindexModal:             1050;
 
 // Sprite icons path
-@iconSpritePath:          "../img/glyphicons-halflings.png";
-@iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
+@iconSpritePath:          asset-path('glyphicons-halflings.png');
+@iconWhiteSpritePath:     asset-path('glyphicons-halflings-white.png');
 
 // Input placeholder text color
 @placeholderText:         @grayLight;
@@ -109,6 +109,8 @@
 @gridColumns:             12;
 @gridColumnWidth:         60px;
 @gridGutterWidth:         20px;
+@wideGridColumnWidth:     70px;
+@wideGridGutterWidth:     30px;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 // Fluid grid
