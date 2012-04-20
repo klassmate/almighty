@@ -719,6 +719,11 @@
       .spanX(@index - 1);
     }
     .spanX (0) {}
+    .spanX_5 (@index) when (@index > 0) {
+      (~".span@{index}_5") { .span(@index+0.5); }
+      .spanX_5 (@index - 1);
+    }
+    .spanX_5 (0) {}
 
     .offsetX (@index) when (@index > 0) {
       (~".offset@{index}") { .offset(@index); }
@@ -751,6 +756,7 @@
 
     // generate .spanX and .offsetX
     .spanX (@gridColumns);
+    .spanX_5 (@gridColumns);
     .offsetX (@gridColumns);
 
   }
